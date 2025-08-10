@@ -1,0 +1,290 @@
+/* Enhanced Styles */
+:root {
+    --bs-primary: #6f42c1;
+    --bs-primary-rgb: 111, 66, 193;
+    --bs-secondary: #fd7e14;
+    --bs-dark: #0f0f1a;
+    --bs-light: #f8f9fa;
+    --bs-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(90deg, #6f42c1 0%, #fd7e14 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Phone Mockup */
+.phone-mockup {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.phone-frame {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.gameplay-video {
+    position: absolute;
+    top: 4.5%;
+    left: 5.5%;
+    width: 89%;
+    height: 91%;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.gameplay-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Glow Effect */
+.glow-on-hover {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.glow-on-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(111, 66, 193, 0.8), 
+        rgba(253, 126, 20, 0.8), 
+        rgba(111, 66, 193, 0.8));
+    z-index: -1;
+    background-size: 200% 200%;
+    animation: gradientGlow 3s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.glow-on-hover:hover::before {
+    opacity: 1;
+}
+
+@keyframes gradientGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Particles */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Trust Badges Section */
+.trust-badge {
+    transition: all 0.3s ease;
+    filter: grayscale(30%);
+    opacity: 0.8;
+}
+
+.trust-badge:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(111, 66, 193, 0.15);
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: linear-gradient(135deg, rgba(111, 66, 193, 0.1) 0%, rgba(253, 126, 20, 0.1) 100%);
+    border-radius: 20px;
+    margin: 0 auto 1.5rem;
+    color: var(--bs-primary);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(111, 66, 193, 0.1);
+}
+
+/* Calculator Section */
+.earnings-calculator {
+    background: linear-gradient(135deg, rgba(111, 66, 193, 0.03) 0%, rgba(253, 126, 20, 0.03) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(111, 66, 193, 0.1);
+}
+
+/* Range Input Styling */
+.form-range::-webkit-slider-thumb {
+    background: var(--bs-primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-range::-moz-range-thumb {
+    background: var(--bs-primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-range::-ms-thumb {
+    background: var(--bs-primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .phone-mockup {
+        margin-top: 2rem;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Premium Navbar Styles */
+.navbar {
+    transition: all 0.4s ease;
+    padding: 15px 0;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    background: rgba(15,15,25,0.98) !important;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.nav-link {
+    position: relative;
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.nav-underline {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6f42c1 0%, #fd7e14 100%);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-underline {
+    width: 60%;
+}
+
+.nav-link.active .nav-underline {
+    width: 60%;
+}
+
+/* Glow Animation for Download Button */
+.glow-animation {
+    animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0; transform: scale(0.95); }
+    50% { opacity: 0.2; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(0.95); }
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(111,66,193,0.6) !important;
+}
+
+/* Logo Animation */
+.logo-text {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+    text-shadow: 0 0 10px rgba(111,66,193,0.5);
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(15,15,25,0.98);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .nav-item {
+        margin-bottom: 10px;
+    }
+    
+    .nav-link {
+        padding: 10px 15px !important;
+        border-radius: 5px;
+    }
+    
+    .nav-link:hover {
+        background: rgba(255,255,255,0.1);
+    }
+    
+    .nav-underline {
+        display: none;
+    }
+}
