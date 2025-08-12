@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+</head>
+<body>
+    <div style="padding: 100px; display: flex; flex-direction: column; justify-content: center;">
+        <input style="border-radius: 10px; padding: 10px; color: black; margin-bottom: 20px;" name="deleteData" id="accountID" placeholder="Enter User ID"/>
+        <input style="border-radius: 10px; padding: 10px; color: black; margin-bottom: 20px;" name="password" id="password" placeholder="Enter Password"/>
+        <button style="padding: 10px; border-radius: 10px; cursor: pointer;" id="deleteBtn" onclick="handleChange()">Submit</button>
+    </div>
+    
+    <script>
+        function handleChange(){
+            let valueID = document.getElementById("accountID").value;
+            let valuePass = document.getElementById("password").value;
+        }
+    </script>
+</body>
+</html>
